@@ -1,4 +1,3 @@
-import Footer from "@/Components/Footer/Footer"
 import Header from "@/Components/Header/Header"
 import Landing from "@/Components/Pages/Home/Landing"
 
@@ -8,7 +7,6 @@ const page = () => {
     <>
      <Header/>
     <Landing/>
-    <Footer/>
     </>
    
   )

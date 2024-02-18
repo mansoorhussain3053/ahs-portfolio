@@ -1,8 +1,51 @@
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
+
+
+@layer components {
+  
+  .heading1{
+    font-size: 70px;
+    font-weight: 700;
+    line-height: 84px;
+    color: #e6e6e6;
+  }
+  .heading2{
+font-size: 32px;
+font-weight: 400;
+line-height: 38px;
+  }
+
+
+  .nav-links {
+    font-family: "Poppins", sans-serif;
+    color: #e6e6e6;
+    font-size: 15px;
+    line-height: 29px;
+    letter-spacing: 1px;
+    font-weight: 400;
+  }
+  .bg-custom-image {
+    background: linear-gradient(
+        180deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 1) 100%
+      ),
+      url('../../public/Images/home.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+  }
+}
+
+
+
+root {
+  
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
@@ -15,6 +58,7 @@
     --background-end-rgb: 0, 0, 0;
   }
 }
+
 
 body {
   color: rgb(var(--foreground-rgb));
