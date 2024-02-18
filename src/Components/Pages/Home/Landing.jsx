@@ -49,7 +49,7 @@ const Landing = () => {
           setWordIndex((prevIndex) => (prevIndex + 1) % words.length); // Move to the next word
         }
       }
-    }, 100); // Change letter every 100 milliseconds
+    }, 130); // Change letter every 100 milliseconds
 
     return () => clearInterval(intervalId);
   }, [letterIndex, direction, wordIndex]);
@@ -58,11 +58,11 @@ const Landing = () => {
     <div className='bg-custom-image'>
       <div className="flex flex-col h-screen justify-end">
 
-        <div className='text-center flex flex-col gap-5'>
+        <div className='text-center flex flex-col gap-5 max-[600px]:gap-1'>
           <h1 className="heading1 ">Arshad Hussain</h1>
           <h4 className="heading2 cd-headline clip home-headline">
             I’m a{' '}
-            <span className="cd-words-wrapper single-headline">
+            <span className="cd-words-wrapper single-headline text-[#009e66] font-bold">
               <span className="word wordactive">{activeWord}</span>
             </span>
           </h4>

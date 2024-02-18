@@ -19,7 +19,34 @@ font-weight: 400;
 line-height: 38px;
   }
 
+@media screen and (max-width: 1024px) {
+  .heading1{
+    font-size: 55px;
+  }
+  .heading2{
+    font-size: 25px;
+  }
+}
 
+@media screen and (max-width: 600px) {
+  .heading1{
+    font-size: 9vw;
+  }
+  .heading2{
+    font-size: 6vw;
+  }
+}
+
+i{
+  transition: all 0.5s;
+}
+
+a{
+  transition: all 0.5s;
+}
+a:hover{
+  color: #009e66;
+}
   .nav-links {
     font-family: "Poppins", sans-serif;
     color: #e6e6e6;
