@@ -4,7 +4,18 @@
 @tailwind utilities;
 
 
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track{
+  background: #d1e5ff18;
+}
+
+::-webkit-scrollbar-thumb{
+  background: #009e66;
+  border-radius: 5px;
+}
 @layer components {
 
 
@@ -97,6 +108,8 @@ a:hover{
     letter-spacing: 1px;
     font-weight: 400;
   }
+
+
   .bg-custom-image {
     background: linear-gradient(
         180deg,
@@ -143,4 +156,5 @@ body {
   .text-balance {
     text-wrap: balance;
   }
+  
 }
