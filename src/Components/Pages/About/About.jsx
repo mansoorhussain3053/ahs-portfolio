@@ -3,6 +3,8 @@ import Profile from "../../../../public/Images/profile.webp"
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6"
 import { IoLogoFacebook } from "react-icons/io"
 import { GrInstagram } from "react-icons/gr"
+import AServices from "./AServices"
+import ATestimonials from "./ATestimonials"
 
 const About = () => {
     const SocialLinks = [
@@ -17,6 +19,7 @@ const About = () => {
 
 
     return (
+        <>
         <div className="py-52">
 
             <div className="max-w-screen-xl m-auto flex flex-col gap-16">
@@ -81,6 +84,9 @@ const About = () => {
                 </div>
             </div>
         </div>
+        <AServices />
+        <ATestimonials/>
+        </>
     )
 }
 
