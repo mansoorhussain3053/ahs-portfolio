@@ -5,6 +5,7 @@ import { IoLogoFacebook } from "react-icons/io"
 import { GrInstagram } from "react-icons/gr"
 import AServices from "./AServices"
 import ATestimonials from "./ATestimonials"
+import APrices from "./APrices"
 
 const About = () => {
     const SocialLinks = [
@@ -86,6 +87,7 @@ const About = () => {
         </div>
         <AServices />
         <ATestimonials/>
+        <APrices/>
         </>
     )
 }
