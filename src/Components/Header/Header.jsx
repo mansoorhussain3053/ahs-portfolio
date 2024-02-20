@@ -44,7 +44,9 @@ const Header = () => {
       >
         <div className="flex justify-between">
           <div>
-            <Image src={Logo} alt="Logo" width={110} />
+            <Link href="/">
+              <Image src={Logo} alt="Logo" width={110} />
+            </Link>
           </div>
 
           <div>
@@ -54,14 +56,14 @@ const Header = () => {
                 return (
                   <li key={i}>
                     {/* Wrap Link with PageTransition */}
-               
-                      <Link
-                        href={data.Link}
-                        className={isActive ? "text-[#009e66] nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full  after:scale-x-100 after:transition after:duration-300 after:origin-center" : "nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"}
-                      >
-                        {data.Name}
-                      </Link>
-                  
+
+                    <Link
+                      href={data.Link}
+                      className={isActive ? "text-[#009e66] nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full  after:scale-x-100 after:transition after:duration-300 after:origin-center" : "nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"}
+                    >
+                      {data.Name}
+                    </Link>
+
                   </li>
                 );
               })}
