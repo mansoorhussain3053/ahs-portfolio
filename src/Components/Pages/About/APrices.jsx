@@ -14,9 +14,9 @@ const APrices = () => {
           <h4 className="heading3">Choose a Plan</h4>
         </div>
 
-        <div className="grid grid-cols-3 gap-7 py-16 ">
+        <div className="grid grid-cols-3 gap-7 py-16 max-[1024px]:grid-cols-2 max-[670px]:grid-cols-1 max-[370px]:py-12">
 
-          <article className=" bg-[#161616] text-center items-center p-12 flex flex-col gap-5 shadow-lg transition-all	hover:shadow-[#009e66] ">
+          <article className=" bg-[#161616] text-center max-[370px]:p-7 items-center p-12 flex flex-col gap-5 shadow-lg transition-all	hover:shadow-[#009e66] ">
             <i className="text-5xl text-[#009e66]"><GiWaterDrop /></i>
             <h3 className="heading4">Standard</h3>
             <h4 className="heading5 tracking-widest	text-[#D4D4D4]	">$19/month</h4>
