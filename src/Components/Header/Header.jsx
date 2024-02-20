@@ -7,7 +7,6 @@ import Link from 'next/link';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import { usePathname } from 'next/navigation';
 
-
 const Header = () => {
   const pathname = usePathname(); // Corrected variable name
 
@@ -54,12 +53,15 @@ const Header = () => {
                 const isActive = pathname === data.Link; // Compare pathname directly with Link
                 return (
                   <li key={i}>
-                    <Link
-                      href={data.Link}
-                      className={isActive ? "text-[#009e66] nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full  after:scale-x-100 after:transition after:duration-300 after:origin-center" : "nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"}
-                    >
-                      {data.Name}
-                    </Link>
+                    {/* Wrap Link with PageTransition */}
+               
+                      <Link
+                        href={data.Link}
+                        className={isActive ? "text-[#009e66] nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full  after:scale-x-100 after:transition after:duration-300 after:origin-center" : "nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"}
+                      >
+                        {data.Name}
+                      </Link>
+                  
                   </li>
                 );
               })}
