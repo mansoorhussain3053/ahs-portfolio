@@ -41,7 +41,7 @@ const AServices = () => {
 
   return (
     <div className="p-30">
-      <div className="max-w-screen-xl m-auto">
+      <div className="max-w-screen-xl px-10 m-auto">
         <div className="flex flex-col gap-5 text-center">
           <p className="paragraph">Services i offer to my clients</p>
           <h4 className="heading3">My Services</h4>

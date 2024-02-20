@@ -22,25 +22,24 @@ const About = () => {
     return (
         <>
             <div className="py-52">
-
-                <div className="max-w-screen-xl m-auto flex flex-col gap-16">
-                    <div className="text-center flex flex-col gap-8">
+                <div className="max-w-screen-xl px-10 m-auto flex flex-col gap-16 max-[1000px]:px-0 ">
+                    <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
                         <p className="paragraph">Get to know me</p>
                         <h2 className="heading3">About Me</h2>
                         <div class="h-1 m-auto bg-[#009e66] w-24"></div>
                     </div>
 
 
-                    <div className="flex gap-20 items-center m-auto px-10">
-                        <article className="w-1/2"><Image src={Profile} alt="Arshad Hussain" /></article>
-                        <article className="w-10/12 flex flex-col gap-5">
+                    <div className="flex gap-20 items-center m-auto max-[1200px]:gap-10 max-[1000px]:flex-col max-[1000px]:gap-36 ">
+                        <article className="w-1/2 max-[740px]:w-fit max-[640px]:px-10"><Image src={Profile} alt="Arshad Hussain" /></article>
+                        <article className="w-10/12 flex flex-col gap-5 max-[1200px]:gap-4">
                             <h4 className="heading6 text-[#009e66]">Who am i?</h4>
                             <h3 className="heading4">I'm Emma Smith, a visual UX/UI Designer and Web Developer</h3>
                             <p className="paragraph">I am a freelancer based in the United Kingdom and i have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast and deliver faster.
                             </p>
                             <div className="h-[1px] bg-[#222222]"></div>
 
-                            <div className=" flex justify-between">
+                            <div className=" flex justify-between max-[552px]:flex-col max-[552px]:gap-5">
                                 <div>
                                     <article className="flex gap-5">
                                         <p className="paragraph1">Name:</p>
