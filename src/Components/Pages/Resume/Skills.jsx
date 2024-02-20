@@ -2,21 +2,21 @@ import { Progress } from "@/Components/ui/progress"
 
 const Skills = () => {
     const Skills = [
-        { Skill: "HTML/CSS", Expertise: "90" },
-        { Skill: "HTML/CSS", Expertise: "90" },
-        { Skill: "HTML/CSS", Expertise: "90" },
-        { Skill: "HTML/CSS", Expertise: "90" },
+        { Skill: "HTML/CSS", Expertise: "85" },
+        { Skill: "Web Design", Expertise: "80" },
+        { Skill: "JavaScript", Expertise: "95" },
+        { Skill: "React JS", Expertise: "75" },
     ]
 
     const OtherSkills = [
-        { Skill: "HTML/CSS", Expertise: "90" },
-        { Skill: "HTML/CSS", Expertise: "90" },
-        { Skill: "HTML/CSS", Expertise: "90" },
-        { Skill: "HTML/CSS", Expertise: "90" },
+        { Skill: "Express.js", Expertise: "85" },
+        { Skill: "TypeScript", Expertise: "75" },
+        { Skill: "Python", Expertise: "95" },
+        { Skill: "Flask", Expertise: "80" },
     ]
     return (
         <>
-            <div className="mt-[-60px]">
+            <div className="mt-[-200px] py-32">
                 <div className="max-w-screen-xl px-10 m-auto flex flex-col gap-16 max-[1000px]:px-0 ">
 
                     <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
@@ -44,7 +44,7 @@ const Skills = () => {
                                 <article key={i}>
                                     <div className="flex flex-col gap-2">
                                         <p>{data.Skill}</p>
-                                        <Progress value={data.Skill} />
+                                        <Progress value={data.Expertise} />
                                     </div>
                                 </article>
                             ))}

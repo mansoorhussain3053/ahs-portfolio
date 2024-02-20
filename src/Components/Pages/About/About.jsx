@@ -6,6 +6,7 @@ import { GrInstagram } from "react-icons/gr"
 import AServices from "./AServices"
 import ATestimonials from "./ATestimonials"
 import APrices from "./APrices"
+import Footer from "@/Components/Footer/Footer"
 
 const About = () => {
     const SocialLinks = [
@@ -87,6 +88,7 @@ const About = () => {
             <AServices />
             <ATestimonials />
             <APrices />
+            <Footer />
         </>
     )
 }

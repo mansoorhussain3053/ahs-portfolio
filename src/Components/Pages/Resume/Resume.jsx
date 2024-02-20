@@ -1,5 +1,6 @@
 import { PiFlagPennantFill } from "react-icons/pi";
 import Skills from "./Skills";
+import Footer from "@/Components/Footer/Footer";
 
 
 const Resume = () => {
@@ -75,6 +76,7 @@ const Resume = () => {
                 </div>
             </div>
             <Skills />
+            <Footer />
         </>
     )
 }
