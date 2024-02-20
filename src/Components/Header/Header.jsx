@@ -5,8 +5,11 @@ import Logo from '../../../public/Images/Logo.webp';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import Link from 'next/link';
 import ProgressBar from '../ProgressBar/ProgressBar';
+import { usePathname } from 'next/navigation';
 
 const Header = () => {
+  const pathname = usePathname(); // Corrected variable name
+
   const [scrolling, setScrolling] = useState(false);
 
   const handleScroll = () => {
@@ -46,16 +49,19 @@ const Header = () => {
 
           <div>
             <ul className="flex gap-8 max-[650px]:hidden">
-              {MenuLinks.map((data, i) => (
-                <li key={i}>
-                  <Link
-                    href={data.Link}
-                    className="nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"
-                  >
-                    {data.Name}
-                  </Link>
-                </li>
-              ))}
+              {MenuLinks.map((data, i) => {
+                const isActive = pathname === data.Link; // Compare pathname directly with Link
+                return (
+                  <li key={i}>
+                    <Link
+                      href={data.Link}
+                      className={isActive ? "text-[#009e66] nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full  after:scale-x-100 after:transition after:duration-300 after:origin-center" : "nav-links relative w-fit block after:block after:content-[''] after:absolute after:h-[3px] after:bg-[#009e66] after:w-full after:scale-x-0 after:hover:scale-x-100 after:transition after:duration-300 after:origin-center"}
+                    >
+                      {data.Name}
+                    </Link>
+                  </li>
+                );
+              })}
             </ul>
             <div className="hidden max-[650px]:block">
               <i className="text-4xl hover:text-[#009e66]">
