@@ -39,10 +39,10 @@ const ATestimonials = () => {
               {Testimonials.map((data, i) => (
 
 
-                <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 ">
                   <div className="p-1">
                     <Card className="bg-transparent border-[#009e66]">
-                      <CardContent className="flex aspect-square items-center justify-center p-10">
+                      <CardContent className="flex  items-center max-[500px]:p-7 justify-center p-10">
                         <div className="flex flex-col gap-10">
                           <div className="flex items-center gap-10">
                             <div className="flex items-center gap-5">

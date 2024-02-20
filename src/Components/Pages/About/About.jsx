@@ -21,7 +21,7 @@ const About = () => {
 
     return (
         <>
-            <div className="py-52">
+            <div className="py-52 max-[1000px]:py-36">
                 <div className="max-w-screen-xl px-10 m-auto flex flex-col gap-16 max-[1000px]:px-0 ">
                     <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
                         <p className="paragraph">Get to know me</p>
@@ -30,7 +30,7 @@ const About = () => {
                     </div>
 
 
-                    <div className="flex gap-20 items-center m-auto max-[1200px]:gap-10 max-[1000px]:flex-col max-[1000px]:gap-36 ">
+                    <div className="flex gap-20 items-center m-auto max-[1200px]:gap-10 max-[1000px]:flex-col max-[1000px]:gap-20 ">
                         <article className="w-1/2 max-[740px]:w-fit max-[640px]:px-10"><Image src={Profile} alt="Arshad Hussain" /></article>
                         <article className="w-10/12 flex flex-col gap-5 max-[1200px]:gap-4">
                             <h4 className="heading6 text-[#009e66]">Who am i?</h4>
@@ -67,7 +67,7 @@ const About = () => {
 
 
                             </div>
-                            <div className="flex gap-10 items-center justify-start py-3">
+                            <div className="flex gap-10 items-center justify-start py-3 max-[548px]:flex-col max-[548px]:items-start">
                                 <article>
                                     <button className="rounded-full transition-all  hover:bg-[#009e67b9] px-7 py-2 bg-[#009e66]">Download CV</button>
                                 </article>

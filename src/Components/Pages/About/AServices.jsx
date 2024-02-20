@@ -47,9 +47,9 @@ const AServices = () => {
           <h4 className="heading3">My Services</h4>
         </div>
 
-        <div className="grid grid-cols-3 gap-7 py-16 ">
+        <div className="grid grid-cols-3 gap-7 py-16 max-[980px]:grid-cols-2 max-[600px]:grid-cols-1 max-[600px]:text-center">
           {Services.map((data, i) => (
-            <article key={i} className=" bg-[#161616] p-12 flex flex-col gap-5 shadow-lg transition-all	hover:shadow-[#009e66] ">
+            <article key={i} className=" bg-[#161616] max-[730px]:p-7 max-[600px]:items-center p-12 flex flex-col gap-5 shadow-lg transition-all	hover:shadow-[#009e66] ">
               <i className="text-5xl text-[#009e66]">{data.Icon}</i>
               <h3 className="heading5">{data.Title}</h3>
               <p className="paragraph">{data.Description}</p>
