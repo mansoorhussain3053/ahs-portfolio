@@ -1,32 +1,23 @@
 "use client"
-
-import { useState, useEffect } from 'react';
-import { FaXTwitter } from "react-icons/fa6";
+import { useState, useEffect } from "react";
+import { FaTwitter } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa6";
+import { FaGithub } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 
 
-
 const Landing = () => {
-
   const SocialLinks = [
-    { Link: "#", Icon: <FaXTwitter /> },
+    { Link: "#", Icon: <FaTwitter /> },
     { Link: "#", Icon: <IoLogoFacebook /> },
     { Link: "#", Icon: <FaLinkedin /> },
     { Link: "#", Icon: <FaGithub /> },
-    { Link: "#", Icon: <GrInstagram /> }
-  ]
+    { Link: "#", Icon: <GrInstagram /> },
+  ];
 
-
-
-
-
-
-
-  const [activeWord, setActiveWord] = useState('');
-  const words = ['SEO Specialist', 'Social Media Marketer', 'Freelancer'];
+  const [activeWord, setActiveWord] = useState("");
+  const words = ["SEO Specialist", "Social Media Marketer", "Freelancer"];
   const [letterIndex, setLetterIndex] = useState(0);
   const [wordIndex, setWordIndex] = useState(0);
   const [direction, setDirection] = useState(1); // 1 for forward, -1 for backward
@@ -49,33 +40,34 @@ const Landing = () => {
           setWordIndex((prevIndex) => (prevIndex + 1) % words.length); // Move to the next word
         }
       }
-    }, 130); // Change letter every 100 milliseconds
+    }, 130); // Change letter every 130 milliseconds
 
     return () => clearInterval(intervalId);
   }, [letterIndex, direction, wordIndex]);
 
   return (
-    <div className='bg-custom-image'>
+    <div className="bg-custom-image">
       <div className="flex flex-col h-screen justify-end">
-
-        <div className='text-center flex flex-col gap-5 max-[600px]:gap-1'>
+        <div className="text-center flex flex-col gap-5 max-[600px]:gap-1">
           <h1 className="heading1 ">Arshad Hussain</h1>
           <h4 className="heading2 cd-headline clip home-headline">
-            I’m a{' '}
+            I’m a{" "}
             <span className="cd-words-wrapper single-headline text-[#009e66] font-bold">
               <span className="word wordactive">{activeWord}</span>
             </span>
           </h4>
         </div>
-        <div className='flex justify-between p-10'>
-          <article className=' flex flex-col justify-end'>
-            <a href='#' className='rotate-90'>ENG</a>
-
+        <div className="flex justify-between p-10">
+          <article className=" flex flex-col justify-end">
+            <a href="#" className="rotate-90">
+              ENG
+            </a>
           </article>
-          <article className='flex flex-col gap-4'>
-
+          <article className="flex flex-col gap-4">
             {SocialLinks.map((data, i) => (
-              <a href={data.Link} key={i} className='text-xl'>{data.Icon}</a>
+              <a href={data.Link} key={i} className="text-xl">
+                {data.Icon}
+              </a>
             ))}
           </article>
         </div>
@@ -84,4 +76,7 @@ const Landing = () => {
   );
 };
 
+ // Export Landing component separately
+
+// Apply PageTransition to Landing component where it's used
 export default Landing;

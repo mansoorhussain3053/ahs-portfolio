@@ -7,6 +7,7 @@ import Link from 'next/link';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import { usePathname } from 'next/navigation';
 
+
 const Header = () => {
   const pathname = usePathname(); // Corrected variable name
 

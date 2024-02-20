@@ -1,9 +1,17 @@
+"use client"
+
+import Example from "@/Components/MobileMenu/Example";
+
+
 
 const Portfolio = () => {
   return (
-    <div>
-      <h1>Portfolio Page</h1>
+    <>
+   
+    <div className="p-80">
+    <Example/>
     </div>
+    </>
   )
 }
 
