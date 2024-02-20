@@ -31,8 +31,8 @@ const Header = () => {
     { Name: 'Home', Link: '/' },
     { Name: 'About', Link: '/about' },
     { Name: 'Resume', Link: '/resume' },
-    { Name: 'Portfolio', Link: '#' },
-    { Name: 'Contact', Link: '#' }
+    { Name: 'Portfolio', Link: '/portfolio' },
+    { Name: 'Contact', Link: '/contact' }
   ];
 
   return (
