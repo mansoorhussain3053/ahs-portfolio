@@ -26,8 +26,8 @@ const Skills = () => {
 
 
                     </div>
-                    <div className="flex gap-36">
-                        <div className="w-1/2 flex flex-col gap-14">
+                    <div className="flex gap-36 max-[1000px]:gap-0 max-[660px]:flex-col max-[660px]:gap-16">
+                        <div className="w-1/2 flex flex-col gap-14 max-[1000px]:px-12 max-[660px]:w-full">
                             {Skills.map((data, i) => (
                                 <article key={i}>
                                     <div className="flex flex-col gap-2">
@@ -39,7 +39,7 @@ const Skills = () => {
                         </div>
 
 
-                        <div className="w-1/2 flex flex-col gap-14">
+                        <div className="w-1/2 flex flex-col gap-14 max-[1000px]:px-12 max-[660px]:w-full">
                             {OtherSkills.map((data, i) => (
                                 <article key={i}>
                                     <div className="flex flex-col gap-2">
