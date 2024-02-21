@@ -19,7 +19,6 @@ const Footer = () => {
         { Lebel: "Home", Link: "/" },
         { Lebel: "About", Link: "/about" },
         { Lebel: "Resume", Link: "/resume" },
-        { Lebel: "Portfolio", Link: "/portfolio" },
         { Lebel: "Contact", Link: "/contact" },
     ]
     return (
