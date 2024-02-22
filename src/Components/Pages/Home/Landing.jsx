@@ -58,10 +58,7 @@ const Landing = () => {
     <div className="bg-custom-image">
       <div className="flex flex-col h-screen justify-end">
         <motion.div
-        variants={container}
-        initial="hidden"
-        animate="show"
-        className="text-center flex flex-col gap-5 max-[600px]:gap-1">
+         className="text-center flex flex-col gap-5 max-[600px]:gap-1">
           <h1 className="heading1 ">Arshad Hussain</h1>
           <h4 className="heading2 cd-headline clip home-headline">
             I’m a{" "}
