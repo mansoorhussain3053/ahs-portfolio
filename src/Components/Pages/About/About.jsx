@@ -7,6 +7,7 @@ import AServices from "./AServices"
 import ATestimonials from "./ATestimonials"
 import APrices from "./APrices"
 import Footer from "@/Components/Footer/Footer"
+import { motion } from 'framer-motion';
 
 const About = () => {
     const SocialLinks = [
@@ -22,7 +23,10 @@ const About = () => {
 
     return (
         <>
-            <div className="py-52 max-[1000px]:py-36">
+            <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            className="py-52 max-[1000px]:py-36">
                 <div className="max-w-screen-xl px-10 m-auto flex flex-col gap-16 max-[1000px]:px-0 ">
                     <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
                         <p className="paragraph">Get to know me</p>
@@ -84,7 +88,7 @@ const About = () => {
                         </article>
                     </div>
                 </div>
-            </div>
+            </motion.div>
             <AServices />
             <ATestimonials />
             <APrices />

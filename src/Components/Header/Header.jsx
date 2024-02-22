@@ -6,8 +6,23 @@ import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import Link from 'next/link';
 import ProgressBar from '../ProgressBar/ProgressBar';
 import { usePathname } from 'next/navigation';
+import { motion } from 'framer-motion';
 
 const Header = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5
+      }
+    }
+  }
+  
+  const item = {
+    hidden: { opacity: 0 },
+    show: { opacity: 1 }
+  }
   const pathname = usePathname(); // Corrected variable name
 
   const [scrolling, setScrolling] = useState(false);
@@ -42,18 +57,26 @@ const Header = () => {
           }`}
       >
         <div className="flex justify-between">
-          <div>
+          <motion.div
+          variants={container}
+          initial="hidden"
+          animate="show"
+          >
             <Link href="/">
               <Image src={Logo} alt="Logo" width={110} />
             </Link>
-          </div>
+          </motion.div>
 
           <div>
-            <ul className="flex gap-8 max-[650px]:hidden">
+            <motion.ul
+            variants={container}
+            initial="hidden"
+            animate="show"
+            className="flex gap-8 max-[650px]:hidden">
               {MenuLinks.map((data, i) => {
                 const isActive = pathname === data.Link; // Compare pathname directly with Link
                 return (
-                  <li key={i}>
+                  <motion.li variants={item} key={i}>
                     {/* Wrap Link with PageTransition */}
 
                     <Link
@@ -63,10 +86,10 @@ const Header = () => {
                       {data.Name}
                     </Link>
 
-                  </li>
+                  </motion.li>
                 );
               })}
-            </ul>
+            </motion.ul>
             <div className="hidden max-[650px]:block">
               <i className="text-4xl hover:text-[#009e66]">
                 {' '}

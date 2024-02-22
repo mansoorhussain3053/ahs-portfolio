@@ -5,8 +5,18 @@ import { IoLogoFacebook } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
+import { motion } from 'framer-motion';
 
 const Landing = () => {
+  const container = {
+    hidden: { opacity: 0 },
+    show: {
+      opacity: 1,
+      transition: {
+        delayChildren: 0.5
+      }
+    }
+  }
   const SocialLinks = [
     { Link: "#", Icon: <FaTwitter /> },
     { Link: "#", Icon: <IoLogoFacebook /> },
@@ -47,7 +57,11 @@ const Landing = () => {
   return (
     <div className="bg-custom-image">
       <div className="flex flex-col h-screen justify-end">
-        <div className="text-center flex flex-col gap-5 max-[600px]:gap-1">
+        <motion.div
+        variants={container}
+        initial="hidden"
+        animate="show"
+        className="text-center flex flex-col gap-5 max-[600px]:gap-1">
           <h1 className="heading1 ">Arshad Hussain</h1>
           <h4 className="heading2 cd-headline clip home-headline">
             I’m a{" "}
@@ -55,7 +69,7 @@ const Landing = () => {
               <span className="word wordactive">{activeWord}</span>
             </span>
           </h4>
-        </div>
+        </motion.div>
         <div className="flex justify-between p-10">
           <article className=" flex flex-col justify-end">
             <a href="#" className="rotate-90">
