@@ -6,7 +6,6 @@ import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
 
-
 const Landing = () => {
   const SocialLinks = [
     { Link: "#", Icon: <FaTwitter /> },
@@ -53,7 +52,7 @@ const Landing = () => {
           <h4 className="heading2 cd-headline clip home-headline">
             I’m a{" "}
             <span className="cd-words-wrapper single-headline text-[#009e66] font-bold">
-              <span className="word wordactive">{activeWord}</span>
+              <span className="word wordactive transition-all duration-500">{activeWord}</span>
             </span>
           </h4>
         </div>
@@ -76,7 +75,4 @@ const Landing = () => {
   );
 };
 
- // Export Landing component separately
-
-// Apply PageTransition to Landing component where it's used
 export default Landing;
