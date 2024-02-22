@@ -52,7 +52,7 @@ const Landing = () => {
           <h4 className="heading2 cd-headline clip home-headline">
             I’m a{" "}
             <span className="cd-words-wrapper single-headline text-[#009e66] font-bold">
-              <span className="word wordactive transition-all duration-500">{activeWord}</span>
+              <span className="word wordactive">{activeWord}</span>
             </span>
           </h4>
         </div>
