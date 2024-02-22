@@ -1,11 +1,11 @@
-"use client"
+"use client";
 import { useState, useEffect } from "react";
 import { FaTwitter } from "react-icons/fa";
 import { IoLogoFacebook } from "react-icons/io";
 import { FaLinkedin } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import { GrInstagram } from "react-icons/gr";
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
 const Landing = () => {
   const container = {
@@ -13,10 +13,10 @@ const Landing = () => {
     show: {
       opacity: 1,
       transition: {
-        delayChildren: 0.5
-      }
-    }
-  }
+        delayChildren: 0.5,
+      },
+    },
+  };
   const SocialLinks = [
     { Link: "#", Icon: <FaTwitter /> },
     { Link: "#", Icon: <IoLogoFacebook /> },
@@ -57,8 +57,7 @@ const Landing = () => {
   return (
     <div className="bg-custom-image">
       <div className="flex flex-col h-screen justify-end">
-        <motion.div
-         className="text-center flex flex-col gap-5 max-[600px]:gap-1">
+        <motion.div className="text-center flex flex-col gap-5 max-[600px]:gap-1">
           <h1 className="heading1 ">Arshad Hussain</h1>
           <h4 className="heading2 cd-headline clip home-headline">
             I’m a{" "}
