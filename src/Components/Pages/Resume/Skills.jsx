@@ -21,7 +21,7 @@ const Skills = () => {
           <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
             <p className="paragraph">My level of knowledge in some tools</p>
             <h2 className="heading3">My Skills</h2>
-            <div class="h-1 m-auto bg-[#009e66] w-24"></div>
+            <div className="h-1 m-auto bg-[#009e66] w-24"></div>
           </div>
           <div className="flex gap-36 max-[1000px]:gap-0 max-[660px]:flex-col max-[660px]:gap-16">
             <div className="w-1/2 flex flex-col gap-14 max-[1000px]:px-12 max-[660px]:w-full">

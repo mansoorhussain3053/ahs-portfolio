@@ -57,7 +57,7 @@ const Resume = () => {
           <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
             <p className="paragraph">Check out my Resume</p>
             <h2 className="heading3">Resume</h2>
-            <div class="h-1 m-auto bg-[#009e66] w-24"></div>
+            <div className="h-1 m-auto bg-[#009e66] w-24"></div>
           </div>
 
           <div className="flex py-16 gap-10 max-[1000px]:flex-col max-[1000px]:p-10">

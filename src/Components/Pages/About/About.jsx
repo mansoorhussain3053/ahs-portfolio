@@ -24,7 +24,7 @@ const About = () => {
           <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
             <p className="paragraph">Get to know me</p>
             <h2 className="heading3">About Me</h2>
-            <div class="h-1 m-auto bg-[#009e66] w-24"></div>
+            <div className="h-1 m-auto bg-[#009e66] w-24"></div>
           </div>
 
           <div className="flex gap-20 items-center m-auto max-[1200px]:gap-10 max-[1000px]:flex-col max-[1000px]:gap-20 ">
