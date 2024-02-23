@@ -60,7 +60,7 @@ const Landing = () => {
         <motion.div className="text-center flex flex-col gap-5 max-[600px]:gap-1">
           <h1 className="heading1 ">Arshad Hussain</h1>
           <h4 className="heading2 cd-headline clip home-headline">
-            I’m a{" "}
+            {"I’m"} a
             <span className="cd-words-wrapper single-headline text-[#009e66] font-bold">
               <span className="word wordactive">{activeWord}</span>
             </span>

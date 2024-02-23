@@ -34,7 +34,7 @@ const About = () => {
             <article className="w-10/12 flex flex-col gap-5 max-[1200px]:gap-4">
               <h4 className="heading6 text-[#009e66]">Who am i?</h4>
               <h3 className="heading4">
-                I'm Emma Smith, a visual UX/UI Designer and Web Developer
+                {"I'm"} Emma Smith, a visual UX/UI Designer and Web Developer
               </h3>
               <p className="paragraph">
                 I am a freelancer based in the United Kingdom and i have been
