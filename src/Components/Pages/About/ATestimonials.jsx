@@ -12,13 +12,35 @@ import {
 
 const ATestimonials = () => {
   const Testimonials = [
-    { Avatar: "https://github.com/shadcn.png", Name: "Maria Wilson", Designation: "Envato Customer", Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30" },
-    { Avatar: "https://github.com/shadcn.png", Name: "Maria Wilson", Designation: "Envato Customer", Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30" },
-    { Avatar: "https://github.com/shadcn.png", Name: "Maria Wilson", Designation: "Envato Customer", Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30" },
-    { Avatar: "https://github.com/shadcn.png", Name: "Maria Wilson", Designation: "Envato Customer", Description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30" }
-  ]
-
-
+    {
+      Avatar: "https://github.com/shadcn.png",
+      Name: "Maria Wilson",
+      Designation: "Envato Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30",
+    },
+    {
+      Avatar: "https://github.com/shadcn.png",
+      Name: "Maria Wilson",
+      Designation: "Envato Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30",
+    },
+    {
+      Avatar: "https://github.com/shadcn.png",
+      Name: "Maria Wilson",
+      Designation: "Envato Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30",
+    },
+    {
+      Avatar: "https://github.com/shadcn.png",
+      Name: "Maria Wilson",
+      Designation: "Envato Customer",
+      Description:
+        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis aperiam, eum, ipsam eligendi distinctio voluptatibus quae nobis perferendis ratione cumque ea hic alias molestias omnis voluptate repellendus eaque, similique sapiente.em30",
+    },
+  ];
 
   return (
     <div className="p-30">
@@ -37,8 +59,6 @@ const ATestimonials = () => {
           >
             <CarouselContent>
               {Testimonials.map((data, i) => (
-
-
                 <CarouselItem key={i} className="md:basis-1/2 lg:basis-1/3 ">
                   <div className="p-1">
                     <Card className="bg-transparent border-[#009e66]">
@@ -51,28 +71,29 @@ const ATestimonials = () => {
                                   src={data.Avatar}
                                   alt={data.Name}
                                 />
-
                               </Avatar>
                               <div>
-                                <h3 className="paragraph text-[#fff]">{data.Name}</h3>
-                                <p className="paragraph text-[13px]">{data.Designation}</p>
+                                <h3 className="paragraph text-[#fff]">
+                                  {data.Name}
+                                </h3>
+                                <p className="paragraph text-[13px]">
+                                  {data.Designation}
+                                </p>
                               </div>
                             </div>
-                            <div><i className="text-[#009e66] text-4xl"><FaQuoteRight /></i></div>
-
+                            <div>
+                              <i className="text-[#009e66] text-4xl">
+                                <FaQuoteRight />
+                              </i>
+                            </div>
                           </div>
                           <p className="paragraph">{data.Description}</p>
                         </div>
-
                       </CardContent>
                     </Card>
                   </div>
                 </CarouselItem>
-
               ))}
-
-
-
             </CarouselContent>
             <CarouselPrevious className="bg-[#009e66] border-[#009e66]" />
             <CarouselNext className="bg-[#009e66] border-[#009e66]" />
