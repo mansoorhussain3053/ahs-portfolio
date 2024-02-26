@@ -64,7 +64,7 @@ const Header = () => {
             </Link>
           </motion.div>
 
-          <div>
+          <div className="flex gap-8 items-center">
             <motion.ul
               variants={container}
               initial="hidden"
@@ -91,12 +91,14 @@ const Header = () => {
                 );
               })}
             </motion.ul>
+
             <div className="hidden max-[650px]:block">
               <i className="text-4xl hover:text-[#009e66]">
                 {" "}
                 <HiOutlineMenuAlt3 />
               </i>
             </div>
+            <div></div>
           </div>
         </div>
       </div>

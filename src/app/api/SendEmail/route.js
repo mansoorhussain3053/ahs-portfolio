@@ -19,7 +19,7 @@ export async function POST(request) {
 
     const mailOption = {
       from: "testingserver95@gmail.com",
-      to: "mansoorhussain3053@gmail.com", // <-- Update recipient email address if needed
+      to: "mansoorhussain3053@gmail.com",
       subject: "Send Email For Next Update",
       html: `
         <h3>Arshad Hussain</h3>
@@ -39,7 +39,7 @@ export async function POST(request) {
       { status: 200 }
     );
   } catch (error) {
-    console.error("Error sending email:", error); // Log any errors
+    console.error("Error sending email:", error);
     return NextResponse.json(
       { message: "Failed to Send Message!" },
       { status: 400 }

@@ -19,7 +19,6 @@ export default function RootLayout({ children }) {
         <Header />
         <div className="max-[900px]:hidden shadow-md">
           <AnimatedCursor
-        
             innerSize={22}
             outerSize={20}
             color="0, 158, 102"
@@ -41,7 +40,10 @@ export default function RootLayout({ children }) {
             ]}
           />
         </div>
-        {children}
+  
+          
+          {children}
+      
         <Toaster richColors position="top-right" />
       </body>
     </html>

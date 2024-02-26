@@ -4,7 +4,10 @@
 @tailwind utilities;
 
 
-
+::selection{
+  background-color: #009e66;
+  color: white;
+}
 
 
 ::-webkit-scrollbar {
