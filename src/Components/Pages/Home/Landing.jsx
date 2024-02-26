@@ -8,7 +8,6 @@ import { GrInstagram } from "react-icons/gr";
 import { motion } from "framer-motion";
 
 const Landing = () => {
-  
   const SocialLinks = [
     { Link: "#", Icon: <FaTwitter /> },
     { Link: "#", Icon: <IoLogoFacebook /> },
