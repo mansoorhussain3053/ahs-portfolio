@@ -12,14 +12,14 @@ export async function POST(request) {
       debug: true,
       secureConnection: false,
       auth: {
-        user: "",
-        pass: "",
+        user: "testingserver95@gmail.com",
+        pass: "kfhxpvjbrhkfvqjk",
       },
     });
 
     const mailOption = {
-      from: "ryangosling3053@gmail.com",
-      to: "ryangosling3053@gmail.com", // <-- Update recipient email address if needed
+      from: "testingserver95@gmail.com",
+      to: "mansoorhussain3053@gmail.com", // <-- Update recipient email address if needed
       subject: "Send Email For Next Update",
       html: `
         <h3>Hello Test</h3>
