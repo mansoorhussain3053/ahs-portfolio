@@ -22,7 +22,8 @@ export async function POST(request) {
       to: "mansoorhussain3053@gmail.com", // <-- Update recipient email address if needed
       subject: "Send Email For Next Update",
       html: `
-        <h3>Hello Test</h3>
+        <h3>Arshad Hussain</h3>
+        <p>Passionate Digital Marketer</p>
         <ul>
           <li>name: ${name}</li>
           <li>email: ${email}</li>

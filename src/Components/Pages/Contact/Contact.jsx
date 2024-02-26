@@ -4,6 +4,8 @@ import { PiRadioButtonFill } from "react-icons/pi";
 import { FaMapLocationDot } from "react-icons/fa6";
 import { FaPhoneAlt } from "react-icons/fa";
 import { IoMdSend } from "react-icons/io";
+import { toast } from "sonner";
+
 import { useState } from "react";
 
 const Contact = () => {
@@ -11,22 +13,39 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
+  const [loading, isLoading] = useState(false);
 
   const sendMail = async (e) => {
+    isLoading(true);
     e.preventDefault();
+    try {
+      const response = await fetch("/api/SendEmail", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json",
+        },
+        body: JSON.stringify({
+          name,
+          email,
+          subject,
+          message,
+        }),
+      });
 
-    const response = await fetch('/api/SendEmail', {
-      method: 'POST',
-      headers: {
-        'content-type': 'application/json'
-      },
-      body:JSON.stringify({
-        name, email, subject, message
-      })
-    })
-    console.log(await response.json());
-
-
+      if (response.ok) {
+        toast.success("Email send successfully");
+        setName("");
+        setEmail("");
+        setSubject("");
+        setMessage("");
+      } else {
+        toast.error("Something went worng while sending email");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+    } finally {
+      isLoading(false);
+    }
   };
 
   const ContactDetails = [
@@ -54,12 +73,13 @@ const Contact = () => {
     { Icon: <FaPhoneAlt /> },
     { Icon: <IoMdSend /> },
   ];
+
   return (
     <>
       <div className="py-52 max-[1000px]:py-36">
         <div className="max-w-screen-xl px-10 m-auto flex flex-col gap-16 max-[1000px]:px-0 ">
           <div className="text-center flex flex-col gap-8 max-[1200px]:gap-2 ">
-            <p className="paragraph">Feel free to contact me anytimes</p>
+            <p className="paragraph">Feel free to contact me anytime</p>
             <h2 className="heading3">Get in Touch</h2>
             <div className="h-1 m-auto bg-[#009e66] w-24"></div>
           </div>
@@ -67,6 +87,7 @@ const Contact = () => {
         <div className="flex max-w-screen-xl px-10 m-auto gap-10 mt-28 max-[920px]:flex-col max-[920px]:gap-32">
           <div className="w-[55%] flex flex-col gap-8 max-[920px]:w-full">
             <h5 className="heading6 font-bold">Message Me</h5>
+
             <form onSubmit={sendMail}>
               <div className="flex flex-col gap-5">
                 <div className="flex gap-5">
@@ -74,9 +95,7 @@ const Contact = () => {
                     name="name"
                     type="text"
                     value={name}
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Name"
                     className=" focus-visible:outline-0 focus-visible:border-b border-[#009e66] w-full py-2 px-4 bg-[#161616] placeholder:text-[#606060]"
                   />
@@ -85,9 +104,7 @@ const Contact = () => {
                     name="email"
                     type="email"
                     value={email}
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email"
                     className="focus-visible:outline-0 focus-visible:border-b border-[#009e66] w-full py-2 px-4 bg-[#161616] placeholder:text-[#606060]"
                   />
@@ -96,18 +113,14 @@ const Contact = () => {
                   name="subject"
                   type="text"
                   value={subject}
-                    onChange={(e) => {
-                      setSubject(e.target.value);
-                    }}
+                  onChange={(e) => setSubject(e.target.value)}
                   placeholder="Subject"
                   className="focus-visible:outline-0 focus-visible:border-b border-[#009e66] w-full py-2 px-4 bg-[#161616] placeholder:text-[#606060]"
                 />
                 <div>
                   <textarea
                     value={message}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
+                    onChange={(e) => setMessage(e.target.value)}
                     placeholder="Message"
                     name="message"
                     id=""
@@ -119,9 +132,9 @@ const Contact = () => {
               </div>
               <button
                 type="submit"
-                className="rounded-full transition-all mt-7 hover:bg-[#009e67b9] px-7 py-2 bg-[#009e66]"
+                className={`rounded-full transition-all mt-7 hover:bg-[#009e67b9] px-7 py-2 bg-[#009e66]`}
               >
-                Send Message
+                {loading ? "Sending..." : "Send Message"}
               </button>
             </form>
           </div>
@@ -131,7 +144,7 @@ const Contact = () => {
               <h5 className="heading6 font-bold">Contact Info</h5>
               <p className="paragraph">
                 Always available for freelance work if the right project comes
-                along, Feel free to contact me!
+                along. Feel free to contact me!
               </p>
               <div className="flex gap-5">
                 <div className="flex flex-col gap-9">

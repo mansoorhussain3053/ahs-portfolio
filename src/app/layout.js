@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "@/Components/Header/Header";
 import AnimatedCursor from "react-animated-cursor";
 import React from "react";
+import { Toaster } from "@/components/ui/sonner";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -12,14 +13,13 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-
   return (
     <html lang="en">
       <body className={inter.className}>
         <Header />
-       
         <div className="max-[900px]:hidden shadow-md">
           <AnimatedCursor
+        
             innerSize={22}
             outerSize={20}
             color="0, 158, 102"
@@ -42,6 +42,7 @@ export default function RootLayout({ children }) {
           />
         </div>
         {children}
+        <Toaster richColors position="top-right" />
       </body>
     </html>
   );
