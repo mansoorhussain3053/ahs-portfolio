@@ -6,6 +6,7 @@ const page = () => {
     <>
     <PageTransition>
       <About />
+      
       </PageTransition>
     </>
   );
