@@ -22,14 +22,16 @@ export async function POST(request) {
       to: "ryangosling3053@gmail.com",
       subject: "Send Email For Next Update",
       html: `
-        <h3>Arshad Hussain</h3>
+        <h1>Arshad Hussain</h1>
         <p>Passionate Digital Marketer</p>
-       
-         <h4>${name}</h4>
-         <h4> ${email}</h4>
-         <h4> ${subject}</h4>
-         <h4>  ${message}</h4>
-        
+
+
+       <ul>
+       <li>Name:  <h4>${name}</h4></li>
+       <li>Email:   <h4> ${email}</h4></li>
+       <li>Subject:     <h4> ${subject}</h4></li>
+       <li>Message:   <h4>  ${message}</h4></li>
+        </ul>
       `,
     };
     await transporter.sendMail(mailOption);
