@@ -1,11 +1,14 @@
-import About from "@/Components/Pages/About/About"
+import About from "../../Components/Pages/About/About";
+import PageTransition from "../PageTransition";
 
 const page = () => {
-    return (
-        <>
-            <About />
-        </>
-    )
-}
+  return (
+    <>
+    <PageTransition>
+      <About />
+      </PageTransition>
+    </>
+  );
+};
 
-export default page
+export default page;
