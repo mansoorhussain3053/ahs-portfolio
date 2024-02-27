@@ -9,20 +9,6 @@ import { usePathname } from "next/navigation";
 import { motion } from "framer-motion";
 
 const Header = () => {
-  const container = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        delayChildren: 0.5,
-      },
-    },
-  };
-
-  const item = {
-    hidden: { opacity: 0 },
-    show: { opacity: 1 },
-  };
   const pathname = usePathname(); // Corrected variable name
 
   const [scrolling, setScrolling] = useState(false);
@@ -58,23 +44,18 @@ const Header = () => {
         }`}
       >
         <div className="flex justify-between">
-          <motion.div variants={container} initial="hidden" animate="show">
+          <div>
             <Link href="/">
               <Image src={Logo} alt="Logo" width={110} />
             </Link>
-          </motion.div>
+          </div>
 
           <div className="flex gap-8 items-center">
-            <motion.ul
-              variants={container}
-              initial="hidden"
-              animate="show"
-              className="flex gap-8 max-[650px]:hidden"
-            >
+            <ul className="flex gap-8 max-[650px]:hidden">
               {MenuLinks.map((data, i) => {
                 const isActive = pathname === data.Link; // Compare pathname directly with Link
                 return (
-                  <motion.li variants={item} key={i}>
+                  <li key={i}>
                     {/* Wrap Link with PageTransition */}
 
                     <Link
@@ -87,10 +68,10 @@ const Header = () => {
                     >
                       {data.Name}
                     </Link>
-                  </motion.li>
+                  </li>
                 );
               })}
-            </motion.ul>
+            </ul>
 
             <div className="hidden max-[650px]:block">
               <i className="text-4xl hover:text-[#009e66]">
