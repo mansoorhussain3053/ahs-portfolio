@@ -19,17 +19,17 @@ export async function POST(request) {
 
     const mailOption = {
       from: "testingserver95@gmail.com",
-      to: "mansoorhussain3053@gmail.com",
+      to: "ryangosling3053@gmail.com",
       subject: "Send Email For Next Update",
       html: `
         <h3>Arshad Hussain</h3>
         <p>Passionate Digital Marketer</p>
-        <ul>
-          <li>name: ${name}</li>
-          <li>email: ${email}</li>
-          <li>subject: ${subject}</li>
-          <li>message: ${message}</li>
-        </ul>
+       
+         <h4>${name}</h4>
+         <h4> ${email}</h4>
+         <h4> ${subject}</h4>
+         <h4>  ${message}</h4>
+        
       `,
     };
     await transporter.sendMail(mailOption);
