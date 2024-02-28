@@ -1,14 +1,11 @@
-import Contact from "@/Components/Pages/Contact/Contact"
-import PageTransition from "../PageTransition"
+import Contact from "@/Components/Pages/Contact/Contact";
 
 const page = () => {
   return (
     <>
-    <PageTransition>
-   <Contact/>
-   </PageTransition>
-   </>
-  )
-}
+      <Contact />
+    </>
+  );
+};
 
-export default page
+export default page;

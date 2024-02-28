@@ -6,7 +6,6 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
 import ProgressBar from "../ProgressBar/ProgressBar";
 import { usePathname } from "next/navigation";
-import { motion } from "framer-motion";
 
 const Header = () => {
   const pathname = usePathname(); // Corrected variable name
