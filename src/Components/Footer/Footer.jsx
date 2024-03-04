@@ -11,7 +11,7 @@ const Footer = () => {
       Description:
         "I am Developer is a blog website where you will find great tutorials on web design and Development. Here each tutorial is beautifully described step by step with the required source code",
     },
-  ];
+  ];   
   const SocialMedia = [
     { Platform: <FaTwitter />, Link: "#" },
     { Platform: <IoLogoFacebook />, Link: "#" },
