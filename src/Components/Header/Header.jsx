@@ -9,7 +9,7 @@ import {
 } from "../../Components/ui/sheet";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Logo from "../../../public/Images/Logo.webp";
+import Logo from "../../../public/Images/logo.webp";
 import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import Link from "next/link";
 import ProgressBar from "../ProgressBar/ProgressBar";

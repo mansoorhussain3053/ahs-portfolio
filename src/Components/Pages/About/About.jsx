@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Profile from "../../../../public/Images/profile.webp";
+import Profile from "../../../../public/Images/Profile.webp";
 import { FaGithub, FaLinkedin, FaXTwitter } from "react-icons/fa6";
 import { IoLogoFacebook } from "react-icons/io";
 import { GrInstagram } from "react-icons/gr";
