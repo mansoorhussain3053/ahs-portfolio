@@ -6,7 +6,7 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "@/components/ui/sheet";
+} from "../../Components/ui/sheet";
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Logo from "../../../public/Images/Logo.webp";

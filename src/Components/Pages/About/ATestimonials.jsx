@@ -1,5 +1,5 @@
-import { Card, CardContent } from "@/components/ui/card";
-import { Avatar, AvatarImage } from "@/components/ui/avatar";
+import { Card, CardContent } from "../../ui/card";
+import { Avatar, AvatarImage } from "../../ui/avatar";
 import { FaQuoteRight } from "react-icons/fa";
 
 import {
@@ -8,7 +8,7 @@ import {
   CarouselItem,
   CarouselNext,
   CarouselPrevious,
-} from "@/components/ui/carousel";
+} from "../../ui/carousel";
 
 const ATestimonials = () => {
   const Testimonials = [
